@@ -1,0 +1,18 @@
+aside.logo {
+    background-color: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside.logo img {
+    padding: 0px 15px;
+    width: 100%;
+    height: 100%;
+}
+
+a, a > p{
+    color: white;
+    text-decoration: none;
+    font-family: "Fredoka one", cursive;
+}
