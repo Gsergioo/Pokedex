@@ -1,5 +1,6 @@
 import React from "react";
 import {FiHome, FiUsers} from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -7,12 +8,12 @@ const Nav = () => {
     return (
         <aside className="menu-area">
             <nav className="menu">
-                <a href="#/" className="">
+                <Link to="/" className="">
                     <FiHome style={{verticalAlign: 'baseline'}} /> <span> Home</span>
-                </a>
-                <a href="#/" className="">
+                </Link>
+                <Link to="/users" className="">
                     <FiUsers style={{verticalAlign: "baseline"}} /> <span> Usuários </span>
-                </a>
+                </Link>
             </nav>
         </aside> 
    )

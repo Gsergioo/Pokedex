@@ -3,6 +3,7 @@
 
     --logo-height: 100px;
     --header-height: 100px;
+    --menu-top-height: 100px;
     --aside-width: 225px;
     --footer-height: 40px;
 
@@ -19,6 +20,7 @@
 .app {
     margin: 0px;
     display: grid;
+    overflow: hidden;
     grid-template-columns: var(--aside-width) 1fr;
     grid-template-rows: 
         var(--header-height)
@@ -52,4 +54,38 @@ main.content {
 
 footer.footer {
     grid-area: footer;
+}
+
+@media(max-width: 768px){
+    .app {
+        overflow: scroll;
+        grid-template-rows:
+            var(--header-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-areas: 
+            "logo header"
+            "menu menu"
+            "content content"
+            "footer footer";
+    }
+}
+
+@media(max-width: 576px){
+    .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+            var(--logo-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-areas:
+            "logo"
+            "menu"
+            "content"
+            "footer"
+        ;
+    }
 }

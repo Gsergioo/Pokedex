@@ -1,19 +1,26 @@
 aside.menu-area {
-    background-color: var(--bg-dark);
-    box-shadow: 
-        2px 0 10px 0 rgba(104, 103, 103, 0.12),
-        2px 0 15px 0 rgba(0, 0, 0, 0.09);
+    background-color: #b92815;
 }
 
 .menu a {
     display: block;
+    font-weight: 600;
     padding: 15px 15px;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
 }
 
 .menu a:hover {
-    background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
-    color: #FFF;
+    background: #fff;
+    color: #E3350D;
     font-weight: 600;
+}
+
+@media(max-width: 768px) {
+    .menu {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: space-around;
+    }
 }

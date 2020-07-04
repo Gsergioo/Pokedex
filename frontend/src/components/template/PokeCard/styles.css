@@ -1,0 +1,133 @@
+.container {
+    height: 240px;
+    width: 180px;
+    
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgb(200, 200, 200, 0.3);
+    margin: 10px 20px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: box-shadow .2s;
+}
+
+img {
+    height: 100px;
+    width: 130px;
+    border-bottom: 1px solid #b92815;
+}
+.details {
+    background-color: rgb(0, 163, 222);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.details:hover {
+    background-color: rgb(0, 163, 222, 0.6);
+}
+
+.types {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   
+}
+
+span.type {
+    text-align: center;
+    width: 70px;
+    margin-left: 3px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 2px;
+
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.container:hover {
+    box-shadow: -1px -1px 17px -5px rgba(0,0,0,0.5);
+}
+
+.name {
+    font-weight: 700;
+}
+
+.grass {
+    background-color: #9BCC50;
+}
+
+.poison {
+    background-color: #B97FC9;
+}
+
+.fire {
+    background-color: rgb(253, 125, 36);
+}
+
+.water {
+    background-color: #4592C4;
+}
+
+.rock {
+    background-color: #A38C21;
+}
+
+.ground {
+    background: linear-gradient(180deg, rgba(163,140,33,1) 50%, rgba(238,213,53,1) 50%);
+
+}
+
+.bug {
+    background-color: #729F3F;
+}
+
+.flying {
+    background: linear-gradient(180deg, rgba(61,199,239,1) 50%, rgba(189,185,184,1) 50%);
+}
+
+.normal {
+    background-color: #A4ACAF;
+}
+
+.electric {
+    background-color: #EED535;
+}
+
+.ice {
+    background-color: #51C4E7;
+}
+
+.fairy {
+    background-color: #FDB9E9;
+}
+
+.steel {
+    background-color: #9EB7B8;
+}
+
+.fighting {
+    background-color: #D56723;
+}
+
+.psychic {
+    background-color: #F366B9;
+}
+
+.dragon {
+    background: linear-gradient(180deg, rgba(83,164,207,1) 50%, rgba(241,110,87,1) 50%);
+}
+
+.dark {
+    background-color: #707070;
+}
+
+.ghost {
+    background-color: #7B62A3;
+}

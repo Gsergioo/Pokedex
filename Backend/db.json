@@ -1,11 +1,9 @@
 {
-    "users": [{
-        "id": 1,
-        "name": "Arthur Oliveira",
-        "email": "teste@gmail.com.br"
-    }, {
-        "id": 2,
-        "name": "Maria Julia da Silva",
-        "email": "teste2@gmail.com"
-    }]
+  "users": [
+    {
+      "name": "Guilherme Sergio de Oliveira",
+      "email": "guilherme.sergio@ufv.br",
+      "id": 1
+    }
+  ]
 }
