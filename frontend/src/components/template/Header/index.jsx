@@ -1,5 +1,5 @@
 import React from "react";
-import {FiHome, FiUsers} from "react-icons/fi";
+import {FiHome, FiUsers, FiStar} from "react-icons/fi";
 
 import "./styles.css";
 
@@ -12,6 +12,9 @@ const Header = (props) => {
                 }
                 {
                     props.icon === "Home" ? <FiHome size={30} style={{verticalAlign: "baseline"}}/> : " "
+                }
+                {
+                    props.icon === "Star" ? <FiStar size={30} style={{verticalAlign: "baseline"}} /> : " "
                 }
                 <span> {props.title} </span>
             </h1>

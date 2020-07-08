@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 import "./styles.css";
 
@@ -18,7 +19,9 @@ const Card = ({
                    })
                }
             </div>
-            <button className="details">Detalhes</button>
+            <Link to={`pokedetails/${id}`}>
+                <button className="details">Detalhes</button>
+            </Link>
         </div>
     );  
 }
