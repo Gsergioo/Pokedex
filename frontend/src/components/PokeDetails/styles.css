@@ -1,7 +1,7 @@
 .container-details {
     display: grid;
     grid-template-columns: 400px auto;
-    grid-template-rows: 50px 200px  auto;
+    grid-template-rows: 50px 250px  auto;
     grid-template-areas: 
         "titulo titulo"
         "about evolutions"
@@ -30,75 +30,3 @@
     border-bottom: 1px solid var(--bg-red);
 }
 
-.grass {
-    background-color: #9BCC50;
-}
-
-.poison {
-    background-color: #B97FC9;
-}
-
-.fire {
-    background-color: rgb(253, 125, 36);
-}
-
-.water {
-    background-color: #4592C4;
-}
-
-.rock {
-    background-color: #A38C21;
-}
-
-.ground {
-    background: linear-gradient(180deg, rgba(163,140,33,1) 50%, rgba(238,213,53,1) 50%);
-
-}
-
-.bug {
-    background-color: #729F3F;
-}
-
-.flying {
-    background: linear-gradient(180deg, rgba(61,199,239,1) 50%, rgba(189,185,184,1) 50%);
-}
-
-.normal {
-    background-color: #A4ACAF;
-}
-
-.electric {
-    background-color: #EED535;
-}
-
-.ice {
-    background-color: #51C4E7;
-}
-
-.fairy {
-    background-color: #FDB9E9;
-}
-
-.steel {
-    background-color: #9EB7B8;
-}
-
-.fighting {
-    background-color: #D56723;
-}
-
-.psychic {
-    background-color: #F366B9;
-}
-
-.dragon {
-    background: linear-gradient(180deg, rgba(83,164,207,1) 50%, rgba(241,110,87,1) 50%);
-}
-
-.dark {
-    background-color: #707070;
-}
-
-.ghost {
-    background-color: #7B62A3;
-}

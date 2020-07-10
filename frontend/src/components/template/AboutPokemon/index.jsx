@@ -6,6 +6,7 @@ const AboutPokemon = ({
     pokemon,
     abilities
 }) => {
+    
     return (
         <div className="about-pokemon">
             <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" className="about-image"/>

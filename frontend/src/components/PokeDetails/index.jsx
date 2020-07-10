@@ -24,7 +24,6 @@ const PokeDetails = (props) => {
                         ...res.data,
                         name: res.data.name.toUpperCase()
                     });
-                    console.log("batata");
                     setStats(res.data.stats);
                     setAbilitites(res.data.abilities);
                 });

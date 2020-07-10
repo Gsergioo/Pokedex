@@ -1,4 +1,37 @@
 .evolutions {
     box-shadow: 4px 10px 31px -9px rgba(0,0,0,0.47);
     border-radius: 5px;
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y: auto;
+}
+
+.evolution-title {
+    width: 100%;
+    text-align: center;
+}
+
+.evolution {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.evolution-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.evolution-name {
+    text-transform: uppercase;
+    font-weight: 600;
 }
