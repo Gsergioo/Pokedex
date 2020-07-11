@@ -6,6 +6,7 @@ import "./styles.css";
 import Main from "../template/Main";
 import AboutPokemon from "../template/AboutPokemon";
 import EvolutionChain from "../template/Evolutions";
+import Stats from "../template/Stats";
 
 const PokeDetails = (props) => {
 
@@ -41,6 +42,7 @@ const PokeDetails = (props) => {
                 <h1 className="pokemon-name">{pokemon.name} - Nº{pokemon.id}</h1>
                 <AboutPokemon pokemon={pokemon} abilities={abilities}/> 
                 <EvolutionChain pokemon={pokemon} id={id}/>  
+                <Stats stats={pokemon.stats} />
             </div> 
         </Main>
     )

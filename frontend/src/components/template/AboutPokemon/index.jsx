@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "./styles.css";
+import api from "../../../services";
 
 const AboutPokemon = ({
     pokemon,
     abilities
 }) => {
     
+    const [generation, setGeneraion] = useState("");
+
+    useEffect(() => {
+        api.get(`pokemon-species/${pokemon.id}`)
+            .then(res => {
+                let generationNum = res.data.generation.name.split("-");
+                generationNum = generationNum[generationNum.length - 1];
+                setGeneraion(generationNum);
+            })
+    }, [pokemon])
+
     return (
         <div className="about-pokemon">
             <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" className="about-image"/>
@@ -21,7 +33,7 @@ const AboutPokemon = ({
                 </div>
                 <div className="height">
                     <h3>Geração:</h3>
-                    <span>Geração I</span>
+                    <span>Geração - {generation}</span>
                 </div>
                 <div className="height">
                     <h3>Habilidades:</h3>

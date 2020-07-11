@@ -1,0 +1,28 @@
+.stats {
+    box-shadow: 4px 10px 31px -4px rgba(0,0,0,0.47);
+    grid-area: stats;
+    margin-top: 10px;
+
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stats > h3 {
+    width: 100%;
+
+}
+.stats-table {
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+.stats-table td {
+    padding-right: 50px;
+    border-bottom: 1px solid #ccc;
+}
