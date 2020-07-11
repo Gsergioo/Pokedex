@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi"
+import { Link } from "react-router-dom";
 import api from "../../../services";
 
+
+import {getEvolutionChain } from "../../../utils";
 import "./styles.css";
 
 
@@ -12,36 +15,6 @@ const EvolutionChain = ({
 
     const [pokeSpecies, setPokeSpecies] = useState({});
     const [evolutionChain, setEvolutionChain] = useState([]);
-
-    function getEvolutionChain(data){
-        function getChain(data, chain, index) {
-            if(data){
-                const url = data.species.url.split("/");
-                chain.push({
-                    name: data.species.name,
-                    id: url[url.length - 2],
-                    index
-                })
-                data.evolves_to.forEach((pokemon) => {
-                    getChain(pokemon, chain, index + 1);
-                })
-            }
-            return chain;
-        }
-
-        const evolutions = getChain(data.chain, [], 0);
-        const newEvolutions = []
-
-        for(let i = 0; i < evolutions.length; i++){
-            if(!newEvolutions[evolutions[i].index]) newEvolutions[evolutions[i].index] = [];
-            newEvolutions[evolutions[i].index].push({
-                name: evolutions[i].name,
-                id: evolutions[i].id
-            }); 
-        }
-        console.log(newEvolutions);
-        return newEvolutions;
-    }
 
     useEffect(() => {
         api.get(`pokemon-species/${id}/`)
@@ -72,7 +45,9 @@ const EvolutionChain = ({
                            {
                                 evolution.map((pokemon) => 
                                     <div className="evolution-card">
-                                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt=""/>
+                                        <Link to={`/pokedetails/${pokemon.id}`}>
+                                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt=""/>
+                                        </Link>
                                         <span className="evolution-name">{pokemon.name}</span>
                                     </div>
     

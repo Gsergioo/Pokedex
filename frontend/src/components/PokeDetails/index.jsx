@@ -30,7 +30,7 @@ const PokeDetails = (props) => {
         }
 
         getPokemon();
-    }, []);
+    }, [id]);
 
     return (
         <Main icon="Star"
