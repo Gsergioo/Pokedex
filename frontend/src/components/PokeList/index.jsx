@@ -8,7 +8,7 @@ import Search from "../template/Search";
 
 import "./styles.css"
 
-const PokeList = () => {
+const PokeList = () => {    
 
     const [pokemons, setPokemons] = useState([]);
     const [pokeDeatils, setPokeDetails] = useState([]);
@@ -17,14 +17,15 @@ const PokeList = () => {
     const [nextState, setNextState] = useState(true);
     const [prevState, setPrevState] = useState(false);
     const [isHome, setIsHome] = useState(true);
+    const [limit, setLimit] = useState(0);
 
     function handleNextButton(){
-        setOffset(offset + 14)   
+        setOffset(offset + limit)   
         if(!prevState) setPrevState(true);
     }
 
     function handlePrevButton(){
-        setOffset(offset - 14);
+        setOffset(offset - limit);
         if(!nextState) setNextState(true);
     }
 
@@ -75,8 +76,10 @@ const PokeList = () => {
 
     useEffect(() => {
         async function getPokemons(){
-            let pokeInfos = []
-            await api.get(`pokemon/?limit=14&offset=${offset}`).then(res => {
+            console.log(window.innerWidth);
+            let pokeInfos = [];
+
+            await api.get(`pokemon/?limit=${limit}&offset=${offset}`).then(res => {
                 pokeInfos = res.data.results;
             });
             setPokemons(pokeInfos);
@@ -90,14 +93,25 @@ const PokeList = () => {
     useEffect(() => {
         async function getPokemons(){
             let pokeInfos = []
-            await api.get("pokemon/?limit=14&offset=0").then(res => {
+            
+            await api.get(`pokemon/?limit=${limit}offset=0`).then(res => {
                 pokeInfos = res.data.results;
             });
             setPokemons(pokeInfos);
         } 
-        
+
         getPokemons()
-    }, [])
+    }, [limit]);
+
+    useEffect(() => {
+        if(window.innerWidth < 560) {
+            setLimit(6);
+        } else if(window.innerWidth < 1440){
+            setLimit(12);
+        } else {
+            setLimit(14);
+        }
+    }, []);
 
 
     return (

@@ -49,6 +49,6 @@
 @media(max-width: 768px) {
     .evolutions {
         width: 100%;
-        box-shadow: 4px 2px 20px -9px rgba(0,0,0,0.47);
+        box-shadow: 0px 0px 15px -7px rgba(0,0,0,0.64);
     }
 }

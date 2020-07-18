@@ -117,7 +117,7 @@
 @media(max-width: 768px) {
     .about-pokemon {
         width: 100%;
-        box-shadow: 4px 2px 20px -9px rgba(0,0,0,0.47);
+        box-shadow: 0px 2px 15px -7px rgba(0,0,0,0.64);
         margin-bottom: 10px;
     }
 }

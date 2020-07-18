@@ -77,7 +77,7 @@ footer.footer {
 
 @media(max-width: 576px){
     .app {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 
             var(--logo-height)
             var(--menu-top-height)

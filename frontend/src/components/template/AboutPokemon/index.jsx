@@ -21,8 +21,11 @@ const AboutPokemon = ({
 
     return (
         <div className="about-pokemon">
-            <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" className="about-image"/>
-            <div className={`about-infos ${pokemon.types ? pokemon.types[0].type.name : ""}`}>
+            { 
+                pokemon.id && 
+                <img src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`} alt="" className="about-image"/>
+            }   
+            <div className={`about-infos ${pokemon.types ? pokemon.types[0].type.name : ""}`}> 
                 <div className="height">
                     <h3>Height:</h3>
                     <span>{pokemon.height/10}m</span>

@@ -4,9 +4,12 @@ header.header {
     overflow: hidden;
     white-space: nowrap;
 
+    width: 100%;
 }
 
 h1 {
     font-size: 1.8em;
 }
+
+
 

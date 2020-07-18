@@ -21,6 +21,7 @@ aside.menu-area {
         display: flex;
         align-items: center;
         height: 100%;
+        width: 100%;
         justify-content: space-around;
     }
 }

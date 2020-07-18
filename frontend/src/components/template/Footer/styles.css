@@ -5,3 +5,12 @@ footer.footer {
     padding: 0 25px;
     background-color: #FFF;
 }
+
+@media(max-width: 410px){
+    footer.footer {
+        width: 100%;
+    }
+    span {
+        font-size: 0.8em;
+    }
+}
