@@ -12,12 +12,9 @@ const PokeDetails = (props) => {
 
     const id = props.match.params.id;
     const [pokemon, setPokemon] = useState({});
-    const [stats, setStats] = useState([]);
     const [abilities, setAbilitites] = useState([]);
 
     useEffect(() => {
-        const id = props.match.params.id;
-
         async function getPokemon(){
             await api.get(`pokemon/${id}`)
                 .then(res => {
@@ -25,7 +22,6 @@ const PokeDetails = (props) => {
                         ...res.data,
                         name: res.data.name.toUpperCase()
                     });
-                    setStats(res.data.stats);
                     setAbilitites(res.data.abilities);
                 });
         }

@@ -16,7 +16,7 @@ aside.menu-area {
     font-weight: 600;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 990px) {
     .menu {
         display: flex;
         align-items: center;

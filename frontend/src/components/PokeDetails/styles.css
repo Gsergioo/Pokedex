@@ -30,3 +30,22 @@
     border-bottom: 1px solid var(--bg-red);
 }
 
+@media(max-width: 768px){
+    .container-details {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50px 600px auto auto;
+        grid-template-areas: 
+            "titulo"
+            "about"
+            "evolutions"
+            "stats"
+        ;
+    
+    
+        background-color: #fff;
+        padding: 50px;
+        height: 100%;
+        width: 100%;
+    }
+}

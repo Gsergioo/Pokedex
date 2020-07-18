@@ -34,6 +34,8 @@
     
     height: 100vh;
     background-color: #F5F5F5;
+
+    overflow-y: auto;
 }
 
 aside.logo {
@@ -56,7 +58,7 @@ footer.footer {
     grid-area: footer;
 }
 
-@media(max-width: 768px){
+@media(max-width: 990px){
     .app {
         overflow: scroll;
         grid-template-rows:

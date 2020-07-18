@@ -22,7 +22,7 @@ const EvolutionChain = ({
                 console.log(res.data.evolution_chain);
                 setPokeSpecies(res.data);
             })
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         if(pokeSpecies.evolution_chain){

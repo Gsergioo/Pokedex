@@ -3,7 +3,7 @@ main > div {
     background-color: #FFF;
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 95%;
     flex-wrap: wrap;
 
     overflow-y: auto;
@@ -12,5 +12,7 @@ main > div {
 @media(max-width: 768px){
     main > div {
         height: auto;
+        margin-bottom: 10px;
+        overflow-y: auto;
     }
 }

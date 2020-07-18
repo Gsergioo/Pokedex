@@ -8,6 +8,7 @@ form {
 }
 
 .search-button {
+    margin-top: 5px;
     border: 1px solid black;
     border-radius: 5px;
     margin-left: 5px;
@@ -16,3 +17,4 @@ form {
     font-weight: 600;
     color: #FFF;
 }
+
