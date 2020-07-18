@@ -17,7 +17,7 @@ const PokeList = () => {
     const [nextState, setNextState] = useState(true);
     const [prevState, setPrevState] = useState(false);
     const [isHome, setIsHome] = useState(true);
-    const [limit, setLimit] = useState(0);
+    const [limit, setLimit] = useState(12);
 
     function handleNextButton(){
         setOffset(offset + limit)   
@@ -101,17 +101,8 @@ const PokeList = () => {
         } 
 
         getPokemons()
-    }, [limit]);
-
-    useEffect(() => {
-        if(window.innerWidth < 560) {
-            setLimit(6);
-        } else if(window.innerWidth < 1440){
-            setLimit(12);
-        } else {
-            setLimit(14);
-        }
     }, []);
+
 
 
     return (
