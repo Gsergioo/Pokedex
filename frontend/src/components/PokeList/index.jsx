@@ -32,7 +32,8 @@ const PokeList = () => {
     async function searchPokemon(name){
         let pokeInfo = []
         setIsHome(false);
-        await api.get(`pokemon/${name}`)
+        
+        await api.get(`pokemon/${name.toLowerCase()}`)
             .then(res => {
                 if(res.data){
                     pokeInfo[0] = {

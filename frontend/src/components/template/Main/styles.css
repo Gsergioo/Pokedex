@@ -5,15 +5,12 @@ main > div {
     justify-content: center;
     height: 95%;
     flex-wrap: wrap;
-
-    overflow-y: auto;
 }
   
 @media(max-width: 768px){
     main > div {
         height: auto;
         margin-bottom: 10px;
-        overflow-y: auto;
         width: 100%;
     }
 }

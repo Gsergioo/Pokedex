@@ -1,4 +1,7 @@
-export  function getEvolutionChain(data){
+import React, { useEffect } from "react";
+import { useLocation, Route } from "react-router-dom";
+
+export function getEvolutionChain(data){
     function getChain(data, chain, index) {
         if(data){
             const url = data.species.url.split("/");
@@ -26,4 +29,20 @@ export  function getEvolutionChain(data){
     }
     console.log(newEvolutions);
     return newEvolutions;
+} 
+
+export const ScrollToTop = (props) => {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        console.log(pathname);
+        document.getElementsByClassName("app")[0].scrollTo(0, 0);
+    }, [pathname] );
+
+  return (
+      <div className="app">
+          {props.children}
+      </div>
+  )
 }

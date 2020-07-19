@@ -46,7 +46,7 @@ const EvolutionChain = ({
                                 evolution.map((pokemon) => 
                                     <div className="evolution-card" key={pokemon.id}>
                                         <Link to={`/pokedetails/${pokemon.id}`}>
-                                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt=""/>
+                                            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt="" />
                                         </Link>
                                         <span className="evolution-name">{pokemon.name}</span>
                                     </div>

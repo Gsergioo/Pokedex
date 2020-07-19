@@ -9,18 +9,21 @@ import Logo from "../components/template/Logo";
 import Footer from "../components/template/Footer";
 import Nav from "../components/template/Nav";
 import Routes from "./routes";
+import { ScrollToTop } from "../utils";
 
 const App = () => {
+    
+
     return (
-        <BrowserRouter>
-            <div className="app">
-                <Logo />
-                <Nav />
-                <Routes />
-                <Footer /> 
-            </div>
+        <BrowserRouter >
+            <ScrollToTop>    
+                    <Logo />
+                    <Nav />
+                    <Routes/>
+                    <Footer /> 
+            </ScrollToTop>
         </BrowserRouter>
-    )
+   )
 }
 
 export default App;
