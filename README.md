@@ -1,5 +1,3 @@
-# Pokedéx
-
 <h1 align="center">Pokedeéx</h1>
 
 <p align="justify">Uma pokedex desenvolvida utilizando React e a fantástica <a href="https://pokeapi.co/">Pokeapi</a>. Desenvolvi essa aplicação com o objetivo de treinar e aprender mais sobre React</p>
